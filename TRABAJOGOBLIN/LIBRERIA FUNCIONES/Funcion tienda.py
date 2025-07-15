@@ -1,15 +1,5 @@
 
-
-#
-#
 import random
-
-
-
-
-
-
-
 
 
 def utensilio_que_quiero_utilizar(mochila,Utensilio_uso):
@@ -64,18 +54,8 @@ def mochila_personaje(mochila,Utensilio_uso,dano_ataque,recibir_dano):
             print("Se abandona la mochila")
 
 
-#print(mochila_personaje(mochila,Utensilio_uso,dano_ataque,recibir_dano))
-#
-#dano= mochila_personaje(mochila,Utensilio_uso,recibir_dano,dano_ataque)
-#dano_ataque=dano+(Fuerza-10)
 monedas_totales=500
-#
-#
-#
-#
-#
-#
-#
+
 def tienda(monedas_totales,mochila):
     monedas_espada=10
     monedas_pocion=20
@@ -166,10 +146,7 @@ def tienda(monedas_totales,mochila):
 
 monedas_totales,mochila=tienda(monedas_totales,mochila)
 
-#
-#
-#
-#tienda(monedas_totales,mochila)
+
 
 
 

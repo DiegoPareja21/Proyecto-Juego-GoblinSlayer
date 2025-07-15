@@ -1,99 +1,4 @@
-"""
 
-Fuerza=10
-Constitucion=10
-Destreza=10
-puntos=3
-
-Vida_personaje=20+((Constitucion-10)*2)
-import random
-
-
-
-
-
-
-
-def huida_rata():
-    print("Acaba de aparecer una rata")
-    cuestion_huida_rata = input("¿Desea usted huir?: ").lower()
-    if cuestion_huida_rata == "si":
-        print("Se procede a lanzar el dado")
-        dado_huida_rata = random.randint(1, 20)
-        print("Usted a sacado un ", dado_huida_rata)
-        if dado_huida_rata >= 8:
-            return ("Usted puede huir")
-        else:
-            return ("Toca ir a por ella")
-    elif cuestion_huida_rata == "no":
-        return ("Vamos a por esa rata")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-huida=huida_rata()
-
-def combate_rata(Vida_peronsaje,huida):
-    rata_vida=4
-    print("Se adentra y aparece una rata")
-
-
-    while huida == "Vamos a por esa rata" or huida == "Toca ir a por ella":
-        huida_rata()
-        while rata_vida >0:
-            dad0_ataque=random.randint(1,20)+(Fuerza-10)
-            golpe_rata=random.randint(1,4)
-            dano_rata=random.randint(1,20)
-            dado_golpe_rata=random.randint(1,20)
-            input("Es su turno de atacarla, lancemos el dado ")
-            if dad0_ataque >=10:
-                print("Usted a sacado un ", dad0_ataque, " por lo que el daño que le hara a la rata sera de: ")
-                print(dano_rata, " puntos de vida")
-                rata_vida=rata_vida - dano_rata
-                print("La vida restante de la rata es ",rata_vida)
-            else:
-                input("Ha fallado su ataque , ahora es turno de la rata")
-                print("La rata a sacado un ", dado_golpe_rata)
-                if dado_golpe_rata >= (12+(Destreza-10)):
-                    print("La rata a conseguido alcanzarte con un dado de ", dado_golpe_rata)
-                    print("Ella le ha hecho un daño de ", golpe_rata, " puntos")
-                    Vida_personaje= Vida_personaje -golpe_rata
-                    print("Le quedan un total de ", Vida_personaje, " puntos de vida")
-                else:
-                    print("La rata no ha conseguido alcanzarte")
-    else:
-        print("Usted volvera al poblado")
-
-
-print(combate_rata(Vida_personaje, huida))
-                                                     """
-
-# def probabilidad_moneda_rata():
-#    numero_moneda_rata=random.randint(1,100)
-#    moneda_rata=random.randint(1,4)
-#    if numero_moneda_rata <= 40:
-#        return("Ha conseguido un total de ", moneda_rata, " monedas")
-#    else:
-#        return("No ha soltado ninguna moneda")
-#
-# print(probabilidad_moneda_rata())
-
-
-# Ejemplo
 import random
 
 
@@ -111,9 +16,7 @@ def monedas_ratas():
         print("No has podido conseguir ninguna moneda")
 
 
-#
-#
-#
+
 def huida_rata():
     print("Acaba de aparecer una rata")
     cuestion_huida_rata = input("¿Desea usted huir?: ")
@@ -134,8 +37,6 @@ def combate_rata(monedas_totales):
 
     print("Se adentra y aparece una rata")
     personaje_vida= 20 + ((Constitucion - 10) * 2)
-
-
 
     while huida == "Vamos a por esa rata" or huida == "Toca ir a por ella":
 
@@ -193,20 +94,7 @@ def alcantarillado():
     input("Aquí encontraras infinitas ratas que puedes combatir")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Variables
+#Variables
 Fuerza=10
 Constitucion=10
 Destreza=10
